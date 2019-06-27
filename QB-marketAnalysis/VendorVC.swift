@@ -9,6 +9,8 @@
 import UIKit
 
 class VendorVC: customVC ,UITableViewDelegate, UITableViewDataSource{
+    
+    var userToSend : Int = 0
     @IBOutlet weak var vendorTableView: UITableView!
      var vendorNames : [String] = ["Mahima Chopra", "Sarthak Gupta", "Akshat Gupta"]
     var vendorImages : [UIImage] = [#imageLiteral(resourceName: "mahima"),#imageLiteral(resourceName: "sarthak"),#imageLiteral(resourceName: "akshat")]
@@ -30,10 +32,18 @@ class VendorVC: customVC ,UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("select ho gya")
+        self.userToSend = indexPath.row
       self.performSegue(withIdentifier: "showVendorProfile", sender: self)
        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showVendorProfile") {
+            let destinationVC = segue.destination as! VendorProfileVC
+           
+            destinationVC.user = self.userToSend
+        }
+    }
     
 var tap = UITapGestureRecognizer(target: self, action: #selector(showProfile))
     

@@ -357,14 +357,18 @@
                                 <rect key="frame" x="43" y="337" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="idO-Xl-iY9">
-                                <rect key="frame" x="43" y="389" width="307" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aN0-eK-rn7"/>
                     </view>
+                    <connections>
+                        <outlet property="venderMail" destination="bAu-pi-Kx3" id="De1-LS-S0z"/>
+                        <outlet property="vendorAddress" destination="1KM-Al-zIn" id="YMc-8e-UW2"/>
+                        <outlet property="vendorCompany" destination="o8z-Od-zzB" id="u7v-j9-WYm"/>
+                        <outlet property="vendorImg" destination="RFT-J8-ETJ" id="50D-5g-X3k"/>
+                        <outlet property="vendorPhone" destination="iDa-cE-DT3" id="9j8-rt-WXM"/>
+                        <outlet property="vendorTitle" destination="IFa-iZ-CLI" id="bqP-2N-ChA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6y6-uz-Jlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
