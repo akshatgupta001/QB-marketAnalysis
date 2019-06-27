@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4105D46822C4D1F50054DA6A /* inputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D46722C4D1F50054DA6A /* inputVC.swift */; };
+		4105D46A22C4DE3E0054DA6A /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D46922C4DE3E0054DA6A /* ReportVC.swift */; };
+		4105D46C22C4E0020054DA6A /* customVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D46B22C4E0020054DA6A /* customVC.swift */; };
+		4105D46E22C4EF430054DA6A /* salesPatternView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4105D46D22C4EF430054DA6A /* salesPatternView.xib */; };
+		4105D47022C4F2000054DA6A /* capitalManagementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4105D46F22C4F2000054DA6A /* capitalManagementView.xib */; };
+		4105D47222C501920054DA6A /* CompetitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4105D47122C501920054DA6A /* CompetitionView.xib */; };
+		4105D47422C531700054DA6A /* VendorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D47322C531700054DA6A /* VendorVC.swift */; };
+		4105D47722C5353B0054DA6A /* vendorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D47522C5353B0054DA6A /* vendorCell.swift */; };
+		4105D47822C5353B0054DA6A /* vendorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4105D47622C5353B0054DA6A /* vendorCell.xib */; };
+		4105D47A22C5503C0054DA6A /* VendorProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D47922C5503C0054DA6A /* VendorProfileVC.swift */; };
 		413D888422C4C52B00F4F1D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D888322C4C52B00F4F1D5 /* AppDelegate.swift */; };
 		413D888622C4C52B00F4F1D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D888522C4C52B00F4F1D5 /* ViewController.swift */; };
 		413D888922C4C52B00F4F1D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413D888722C4C52B00F4F1D5 /* Main.storyboard */; };
@@ -15,6 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4105D46722C4D1F50054DA6A /* inputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputVC.swift; sourceTree = "<group>"; };
+		4105D46922C4DE3E0054DA6A /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		4105D46B22C4E0020054DA6A /* customVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customVC.swift; sourceTree = "<group>"; };
+		4105D46D22C4EF430054DA6A /* salesPatternView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = salesPatternView.xib; sourceTree = "<group>"; };
+		4105D46F22C4F2000054DA6A /* capitalManagementView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = capitalManagementView.xib; sourceTree = "<group>"; };
+		4105D47122C501920054DA6A /* CompetitionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompetitionView.xib; sourceTree = "<group>"; };
+		4105D47322C531700054DA6A /* VendorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorVC.swift; sourceTree = "<group>"; };
+		4105D47522C5353B0054DA6A /* vendorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vendorCell.swift; sourceTree = "<group>"; };
+		4105D47622C5353B0054DA6A /* vendorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = vendorCell.xib; sourceTree = "<group>"; };
+		4105D47922C5503C0054DA6A /* VendorProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorProfileVC.swift; sourceTree = "<group>"; };
 		413D888022C4C52B00F4F1D5 /* QB-marketAnalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QB-marketAnalysis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		413D888322C4C52B00F4F1D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413D888522C4C52B00F4F1D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +80,16 @@
 				413D888A22C4C52C00F4F1D5 /* Assets.xcassets */,
 				413D888C22C4C52C00F4F1D5 /* LaunchScreen.storyboard */,
 				413D888F22C4C52C00F4F1D5 /* Info.plist */,
+				4105D46722C4D1F50054DA6A /* inputVC.swift */,
+				4105D46922C4DE3E0054DA6A /* ReportVC.swift */,
+				4105D46B22C4E0020054DA6A /* customVC.swift */,
+				4105D46D22C4EF430054DA6A /* salesPatternView.xib */,
+				4105D46F22C4F2000054DA6A /* capitalManagementView.xib */,
+				4105D47122C501920054DA6A /* CompetitionView.xib */,
+				4105D47322C531700054DA6A /* VendorVC.swift */,
+				4105D47522C5353B0054DA6A /* vendorCell.swift */,
+				4105D47622C5353B0054DA6A /* vendorCell.xib */,
+				4105D47922C5503C0054DA6A /* VendorProfileVC.swift */,
 			);
 			path = "QB-marketAnalysis";
 			sourceTree = "<group>";
@@ -124,7 +154,11 @@
 			files = (
 				413D888E22C4C52C00F4F1D5 /* LaunchScreen.storyboard in Resources */,
 				413D888B22C4C52C00F4F1D5 /* Assets.xcassets in Resources */,
+				4105D46E22C4EF430054DA6A /* salesPatternView.xib in Resources */,
 				413D888922C4C52B00F4F1D5 /* Main.storyboard in Resources */,
+				4105D47822C5353B0054DA6A /* vendorCell.xib in Resources */,
+				4105D47222C501920054DA6A /* CompetitionView.xib in Resources */,
+				4105D47022C4F2000054DA6A /* capitalManagementView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4105D47A22C5503C0054DA6A /* VendorProfileVC.swift in Sources */,
+				4105D46822C4D1F50054DA6A /* inputVC.swift in Sources */,
+				4105D46C22C4E0020054DA6A /* customVC.swift in Sources */,
+				4105D47722C5353B0054DA6A /* vendorCell.swift in Sources */,
 				413D888622C4C52B00F4F1D5 /* ViewController.swift in Sources */,
+				4105D46A22C4DE3E0054DA6A /* ReportVC.swift in Sources */,
+				4105D47422C531700054DA6A /* VendorVC.swift in Sources */,
 				413D888422C4C52B00F4F1D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
