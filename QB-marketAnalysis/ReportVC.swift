@@ -9,9 +9,19 @@
 import UIKit
 
 class ReportVC: customVC {
+    
+    @IBOutlet weak var budgetLbl: UILabel!
+    @IBOutlet weak var categoryLbl: UILabel!
+    var budget  = String()
+    var category = String()
     let cardHeight : CGFloat = 350
     let cardWidth : CGFloat = 354
     
+    @IBOutlet weak var locationField: UILabel!
+    var userToSend : Int = 0
+    var stateVar : Int = 0
+    @IBOutlet weak var financeBtn: UIButton!
+    @IBOutlet weak var vendorBtn: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     var images = [UIImageView]()
     var cardViews = [UIView]()
@@ -23,18 +33,55 @@ class ReportVC: customVC {
         setCapitalView()
         setSalesView()
         setCompetitionView()
+        
+        if(stateVar==0){
+            locationField.text = "California, USA"
+        }else if(stateVar==1){
+            locationField.text = "New York, USA"
+        }
+        categoryLbl.text = category
+        budgetLbl.text = budget
+        
+        vendorBtn.layer.cornerRadius = vendorBtn.bounds.height/10
+        financeBtn.layer.cornerRadius = financeBtn.bounds.height/10
 
+    }
+    @IBAction func showVendor(_ sender: Any) {
+        performSegue(withIdentifier: "showVendor", sender: self)
+    }
+    @IBAction func showFinance(_ sender: Any) {
+        performSegue(withIdentifier: "showFinance", sender: self)
     }
     
     func setSalesView(){
 
         let myView = Bundle.loadView(fromNib: "salesPatternView", withType: UIView.self)
+        var myImg : UIImage = UIImage()
+        if(stateVar==0){
+            myImg = #imageLiteral(resourceName: "hist1")
+        }else{
+            myImg = #imageLiteral(resourceName: "hist2")
+        }
+        let myImgView = UIImageView(image: myImg)
+        myView.addSubview(myImgView)
+        myImgView.frame = CGRect(x: 6, y: 46, width: 340, height: 300)
+        myImgView.contentMode = .scaleAspectFit
         cardViews.append(myView)
         
     }
     func setCapitalView(){
         
         let myView = Bundle.loadView(fromNib: "capitalManagementView", withType: UIView.self)
+        var myImg : UIImage = UIImage()
+        if(stateVar==0){
+            myImg = #imageLiteral(resourceName: "cali")
+        }else{
+            myImg = #imageLiteral(resourceName: "NY")
+        }
+        let myImgView = UIImageView(image: myImg)
+        myView.addSubview(myImgView)
+        myImgView.frame = CGRect(x: 6, y: 46, width: 340, height: 300)
+        myImgView.contentMode = .scaleAspectFit
         cardViews.append(myView)
         
     }
@@ -84,6 +131,24 @@ class ReportVC: customVC {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showVendor") {
+            let destinationVC = segue.destination as! VendorVC
+            
+            destinationVC.userToSend = self.userToSend
+            destinationVC.stateVar = self.stateVar
+            
+        }
+        if (segue.identifier == "showFinance") {
+            let destinationVC = segue.destination as! FinanceVC
+            
+            destinationVC.userToSend = self.userToSend
+            destinationVC.stateVar = self.stateVar
+            
+        }
+        
+    }
+    
   
     
 
@@ -92,6 +157,8 @@ extension Bundle {
     
     static func loadView<T>(fromNib name: String, withType type: T.Type) -> T {
         if let view = Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as? T {
+            
+            
             return view
         }
         

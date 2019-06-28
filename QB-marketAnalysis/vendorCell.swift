@@ -10,6 +10,8 @@ import UIKit
 
 class vendorCell: UITableViewCell {
 
+    @IBOutlet weak var milesLbl: UILabel!
+    @IBOutlet weak var milesLogo: UIImageView!
     @IBOutlet weak var star5: UIImageView!
     @IBOutlet weak var star4: UIImageView!
     @IBOutlet weak var img: UIImageView!

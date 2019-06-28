@@ -80,6 +80,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="img" destination="BTQ-7q-1B9" id="NZL-9k-y8A"/>
+                <outlet property="milesLbl" destination="3bu-0Q-S44" id="xaN-t2-RL3"/>
+                <outlet property="milesLogo" destination="ZsD-Nz-yHP" id="K4B-Uw-dZx"/>
                 <outlet property="star1" destination="29x-aZ-Yqg" id="rBF-BJ-c63"/>
                 <outlet property="star2" destination="WhZ-D4-6DV" id="SCF-Qs-TYd"/>
                 <outlet property="star3" destination="jZb-A4-k5c" id="dLL-tD-LIB"/>

@@ -10,7 +10,10 @@ import UIKit
 
 class inputVC: customVC, UIPickerViewDelegate,UIPickerViewDataSource {
     
+    var stateVar : Int = 1
+    var userToSend : Int = 0 
     
+    @IBOutlet weak var stateField: UITextField!
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -18,8 +21,10 @@ class inputVC: customVC, UIPickerViewDelegate,UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(pickerView==categoryPickerView){
             return categoryData.count
-        }else{
+        }else if(pickerView==capitalPickerView){
             return capitalData.count
+        }else{
+            return stateData.count
         }
         
     }
@@ -27,58 +32,80 @@ class inputVC: customVC, UIPickerViewDelegate,UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView==categoryPickerView){
             return categoryData[row]
-        }else{
+        }else if(pickerView==capitalPickerView){
             return capitalData[row]
+        }else{
+            return stateData[row]
         }
         
+    }
+    
+    @IBAction func proceedToReports(_ sender: Any) {
+        self.performSegue(withIdentifier: "showReport", sender: Any?.self)
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(pickerView==categoryPickerView){
             categoryInputField.text = categoryData[row]
-        }else{
+        }else if(pickerView==capitalPickerView){
             capitalInputField.text = capitalData[row]
+        }else{
+            stateField.text = stateData[row]
+            stateVar = row
         }
         
         self.dismissKeyboard()
     }
 
-    @IBOutlet weak var financeBtn: UIButton!
-    @IBOutlet weak var vendorBtn: UIButton!
+    
    
     @IBOutlet weak var capitalInputField: UITextField!
     @IBOutlet weak var categoryInputField: UITextField!
      let categoryPickerView: UIPickerView = UIPickerView()
     let capitalPickerView: UIPickerView = UIPickerView()
+    let statePickerView: UIPickerView = UIPickerView()
     
     @IBOutlet weak var proceedBtn: UIButton!
     
     var categoryData: [String] = [String]()
     var capitalData: [String] = [String]()
+    var stateData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         proceedBtn.layer.cornerRadius = proceedBtn.bounds.height/2
-        vendorBtn.layer.cornerRadius = vendorBtn.bounds.height/10
-        financeBtn.layer.cornerRadius = financeBtn.bounds.height/10
+      
         // Do any additional setup after loading the view.
         
         self.categoryPickerView.delegate = self
         self.categoryPickerView.dataSource = self
         self.capitalPickerView.delegate = self
         self.capitalPickerView.dataSource = self
+        self.statePickerView.delegate = self
+        self.statePickerView.dataSource = self
         
         categoryInputField.inputView = categoryPickerView
         capitalInputField.inputView = capitalPickerView
+        stateField.inputView = statePickerView
         
         categoryData = ["Manufacturing","Tours and Travels","Clothing","Food Chain","Retail","Logistics","Hospitality","Others"]
         capitalData = ["$2k-$5k","$5k-$10k","$10k-$25k","25k-$50k","$50k and above"]
+        stateData = ["California","New York"]
         
         
         
     }
 
-    @IBAction func showVendor(_ sender: Any) {
-        performSegue(withIdentifier: "showVendor", sender: self)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showReport") {
+            let destinationVC = segue.destination as! ReportVC
+            
+            destinationVC.userToSend = self.userToSend
+            destinationVC.stateVar = self.stateVar
+            destinationVC.budget = (self.capitalInputField.text)!
+            destinationVC.category = self.categoryInputField.text!
+        }
+       
+        
     }
     
     
