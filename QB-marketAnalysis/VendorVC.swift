@@ -15,6 +15,7 @@ class VendorVC: customVC ,UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var vendorTableView: UITableView!
      var vendorNames : [String] = ["Mahima Chopra", "Sarthak Gupta", "Akshat Gupta"]
     var vendorImages : [UIImage] = [#imageLiteral(resourceName: "mahima"),#imageLiteral(resourceName: "sarthak"),#imageLiteral(resourceName: "akshat")]
+    var starsCount : [Int] = [4,2,5]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vendorNames.count
     }
@@ -24,6 +25,24 @@ class VendorVC: customVC ,UITableViewDelegate, UITableViewDataSource{
        cell.awakeFromNib()
         cell.titleLabel.text = vendorNames[indexPath.row]
         cell.img.image = vendorImages[indexPath.row]
+        for i in 1...starsCount[indexPath.row]{
+            if(i==1){
+                cell.star1.image =  #imageLiteral(resourceName: "starFill")
+            }
+            if(i==2){
+                cell.star2.image =  #imageLiteral(resourceName: "starFill")
+            }
+            if(i==3){
+                cell.star3.image =  #imageLiteral(resourceName: "starFill")
+            }
+            if(i==4){
+                cell.star4.image =  #imageLiteral(resourceName: "starFill")
+            }
+            if(i==5){
+                cell.star5.image =  #imageLiteral(resourceName: "starFill")
+            }
+            
+        }
         cell.img.addGestureRecognizer(tap)
         cell.img.tag = indexPath.row
         cell.img.isUserInteractionEnabled = true
