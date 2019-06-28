@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QB-marketAnalysis/ReportVC.swift"
-            timestampString = "583360338.67127"
+            timestampString = "583375778.536765"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "setCompetitionView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QB-marketAnalysis/VendorVC.swift"
-            timestampString = "583360338.671344"
+            filePath = "QB-marketAnalysis/ReportVC.swift"
+            timestampString = "583375778.536829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "setCapitalView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

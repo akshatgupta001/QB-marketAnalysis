@@ -17,6 +17,8 @@
 		4105D47722C5353B0054DA6A /* vendorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D47522C5353B0054DA6A /* vendorCell.swift */; };
 		4105D47822C5353B0054DA6A /* vendorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4105D47622C5353B0054DA6A /* vendorCell.xib */; };
 		4105D47A22C5503C0054DA6A /* VendorProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D47922C5503C0054DA6A /* VendorProfileVC.swift */; };
+		4105D47C22C580330054DA6A /* FinanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D47B22C580330054DA6A /* FinanceVC.swift */; };
+		4105D47E22C580630054DA6A /* FinanceProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D47D22C580630054DA6A /* FinanceProfileVC.swift */; };
 		413D888422C4C52B00F4F1D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D888322C4C52B00F4F1D5 /* AppDelegate.swift */; };
 		413D888622C4C52B00F4F1D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D888522C4C52B00F4F1D5 /* ViewController.swift */; };
 		413D888922C4C52B00F4F1D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413D888722C4C52B00F4F1D5 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		4105D47522C5353B0054DA6A /* vendorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vendorCell.swift; sourceTree = "<group>"; };
 		4105D47622C5353B0054DA6A /* vendorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = vendorCell.xib; sourceTree = "<group>"; };
 		4105D47922C5503C0054DA6A /* VendorProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorProfileVC.swift; sourceTree = "<group>"; };
+		4105D47B22C580330054DA6A /* FinanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceVC.swift; sourceTree = "<group>"; };
+		4105D47D22C580630054DA6A /* FinanceProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceProfileVC.swift; sourceTree = "<group>"; };
 		413D888022C4C52B00F4F1D5 /* QB-marketAnalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QB-marketAnalysis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		413D888322C4C52B00F4F1D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413D888522C4C52B00F4F1D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				4105D47522C5353B0054DA6A /* vendorCell.swift */,
 				4105D47622C5353B0054DA6A /* vendorCell.xib */,
 				4105D47922C5503C0054DA6A /* VendorProfileVC.swift */,
+				4105D47B22C580330054DA6A /* FinanceVC.swift */,
+				4105D47D22C580630054DA6A /* FinanceProfileVC.swift */,
 			);
 			path = "QB-marketAnalysis";
 			sourceTree = "<group>";
@@ -173,8 +179,10 @@
 				4105D46822C4D1F50054DA6A /* inputVC.swift in Sources */,
 				4105D46C22C4E0020054DA6A /* customVC.swift in Sources */,
 				4105D47722C5353B0054DA6A /* vendorCell.swift in Sources */,
+				4105D47C22C580330054DA6A /* FinanceVC.swift in Sources */,
 				413D888622C4C52B00F4F1D5 /* ViewController.swift in Sources */,
 				4105D46A22C4DE3E0054DA6A /* ReportVC.swift in Sources */,
+				4105D47E22C580630054DA6A /* FinanceProfileVC.swift in Sources */,
 				4105D47422C531700054DA6A /* VendorVC.swift in Sources */,
 				413D888422C4C52B00F4F1D5 /* AppDelegate.swift in Sources */,
 			);
