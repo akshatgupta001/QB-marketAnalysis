@@ -33,6 +33,7 @@ class ReportVC: customVC {
         setCapitalView()
         setSalesView()
         setCompetitionView()
+        setEmployeeView()
         
         if(stateVar==0){
             locationField.text = "California, USA"
@@ -88,6 +89,12 @@ class ReportVC: customVC {
     func setCompetitionView(){
         
         let myView = Bundle.loadView(fromNib: "CompetitionView", withType: UIView.self)
+        cardViews.append(myView)
+        
+    }
+    func setEmployeeView(){
+        
+        let myView = Bundle.loadView(fromNib: "EmployeeView", withType: UIView.self)
         cardViews.append(myView)
         
     }
